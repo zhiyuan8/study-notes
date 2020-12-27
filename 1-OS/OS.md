@@ -2,19 +2,20 @@
 info from [Tutorialspoint](https://www.tutorialspoint.com/operating_system/index.htm)
 ***
 
-# 1.	Operating System Definition
+# 1. Operating System Definition
 An operating system is a program that acts as an interface between the user and the computer hardware and controls the execution of all kinds of programs.
+![OS](/img/1-OS.png)
 
 # 2. Operating System Types
 ### 1. Batch operating system
 The users of a batch operating system do not interact with the computer directly. Each user prepares his job on an off-line device and submits it to the computer operator. To speed up processing, jobs with similar needs are batched together and run as a group.
 Disadvantages:
-* Lack of interaction between the user and the job.
-* CPU is often idle, because the speed of the mechanical I/O devices is slower than the CPU.
+*  Lack of interaction between the user and the job.
+*  CPU is often idle, because the speed of the mechanical I/O devices is slower than the CPU.
 * Difficult to provide the desired priority.
 
 ### 2. Time-sharing operating systems
-Time-sharing is a technique which enables many people, located at various terminals, to use a particular computer system at the same time. in Time-Sharing Systems, the objective is to *minimize response time*.
+Time-sharing is a technique which enables many people, located at various terminals, to use a particular computer system at the same time. in Time-Sharing Systems, the objective is to **minimize response time**.
 Disadvantages:
 * Problem of reliability.
 * Question of security and integrity of user programs and data.
@@ -50,13 +51,12 @@ A real-time system is defined as a data processing system in which the time inte
 I/O operation means read or write operation with any file or any specific I/O device. Operating system provides the access to the required I/O device when required.
 
 ### [IMPORTANT] service 3: File System manipulation
-File management steps:
-1.	Program needs to read a file or write a file.
-2.	The operating system gives the **permission** to the program for operation on file.
-3.	Permission varies from read-only, read-write, denied and so on.
-4.	Operating System provides an interface to the user to create/delete files.
-5.	Operating System provides an interface to the user to create/delete directories.
-6.	Operating System provides an interface to create the **backup** of file system.
+1.	Program needs to read a file or write a file.  
+2.	The operating system gives the **permission** to the program for operation on file.  
+3.	Permission varies from read-only, read-write, denied and so on.  
+4.	Operating System provides an interface to the user to create/delete files.  
+5.	Operating System provides an interface to the user to create/delete directories.  
+6.	Operating System provides an interface to create the **backup** of file system.  
 
 ### service 4: Communication
 1.	Two processes often require data to be transferred between them
@@ -88,4 +88,10 @@ Priority can be decided based on memory requirements, time requirements or any o
 ### Round Robin(RR) Scheduling
 Each process is provided a fix time to execute, it is called a quantum.
 Once a process is executed for a given time period, it is preempted and other process executes for a given time period.
+![Round Robin](1-2-round-robin.png)
 
+### Multiple-Level Queues Scheduling
+Multiple-level queues are not an independent scheduling algorithm. Multiple queues are maintained for processes with common characteristics.
+*	Each queue can have its own scheduling algorithms.
+*	Priorities are assigned to each queue.
+For example, **CPU-bound jobs can be scheduled in one queue and all I/O-bound jobs in another queue**. The Process Scheduler then alternately selects jobs from each queue and assigns them to the CPU based on the algorithm assigned to the queue.

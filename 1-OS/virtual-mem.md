@@ -18,10 +18,14 @@ Unlike primary memory, secondary memory is not accessed directly by the CPU. Ins
 **memory management unit (work with Paging)**
 MMU divides the virtual address space (the range of addresses used by the processor) into pages, each having a size which is a power of 2, usually a few kB, but they may be much larger. The bottom bits of the address (the offset within a page) are left unchanged. The upper address bits are the virtual page numbers. performing the **translation of virtual memory addresses to physical addresses**.
 
-### 2. Virtual Memory
+### 2. Virtual Memory 虚拟内存
 **Virtual memory is a memory management technique where secondary memory (disk) can be used as if it were a part of the main memory.**
 Virtual memory uses hardware and software to allow a computer to compensate for physical memory shortages, by temporarily **transferring data from random access memory (RAM) to disk storage**.
 There are two ways in which virtual memory is handled: **paging and segmentation**.
+
+CPU虚拟化技术
+Turning a single CPU (or a small set of them) into a seemingly infinite number of CPUs and thus allowing many programs to seemingly run at once is what we call virtualizing the CPU
+CPU的虚拟化技术可以单CPU模拟多CPU并行，允许一个平台同时运行多个操作系统，并且应用程序都可以在相互独立的空间内运行而互不影响，从而显著提高计算机的工作效率；
 
 Benefits:
 1.	handle twice as many addresses as main memory  
@@ -46,18 +50,18 @@ Physical Address = Frame number + page offset
 \end{equation}
 **page map table**: translate the virtual addresses that the OS and applications use into the physical addresses that the MMU (memory management unit) uses.
 
-![Paging](2-paging.png)
+![Paging](/img/2-paging.png)
 
 #### Segmentation
 Segmentation divides virtual memory into segments of different lengths. Segments not in use in memory can be moved to virtual memory space on the hard drive.  
 Segmentation memory management works very similar to paging but here segments are of **variable-length** where as in paging pages are of fixed size. For each segment, the table stores the starting address of the segment and the length of the segment. A reference to a memory location includes a value that identifies a segment and an offset.
 
-![Segmentation](3-segmnetation.png)
+![Segmentation](/img/3-segmnetation.png)
 
 #### Fragmentation (free memory space in pieces, need compaction)
 As processes are loaded and removed from memory, the free memory space is broken into little pieces. It happens after sometimes that processes cannot be allocated to memory blocks considering their small size and memory blocks remains unused. This problem is known as Fragmentation.
 
-![Fragmentation](4-fragmentation.png)
+![Fragmentation](/img/4-fragmentation.png)
 
 #### Thrashing
 thrashing or disk thrashing describes when **a hard drive is being overworked by moving information between the system memory and virtual memory excessively**. Thrashing occurs when the system does not have enough memory, the system swap file is not properly configured, too much is running at the same time, or has low system resources. When thrashing occurs, the computer hard drive is always working and system performance decreases. Thrashing is serious because of the amount of work the hard drive has to do, and if left unfixed can cause an early hard drive failure.

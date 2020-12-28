@@ -1,6 +1,5 @@
 # Basics for OS
 info from [Tutorialspoint](https://www.tutorialspoint.com/operating_system/index.htm)
-***
 
 # 1. Operating System Definition
 An operating system is a program that acts as an interface between the user and the computer hardware and controls the execution of all kinds of programs.
@@ -88,7 +87,7 @@ Priority can be decided based on memory requirements, time requirements or any o
 ### Round Robin(RR) Scheduling
 Each process is provided a fix time to execute, it is called a quantum.
 Once a process is executed for a given time period, it is preempted and other process executes for a given time period.
-![Round Robin](1-2-round-robin.png)
+![Round Robin](/img/1-2-round-robin.png)
 
 ### Multiple-Level Queues Scheduling
 Multiple-level queues are not an independent scheduling algorithm. Multiple queues are maintained for processes with common characteristics.

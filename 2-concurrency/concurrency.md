@@ -3,22 +3,29 @@ info from [RealPython](https://realpython.com/python-concurrency/)
 info from [Educative.io](https://www.educative.io/courses/python-concurrency-for-senior-engineering-interviews/NEm20mBZZy6)
 info from [Tutorialspoint](https://www.tutorialspoint.com/concurrency_in_python/concurrency_in_python_quick_guide.htm)
 
-# 1. concurrency Basics
+# 1. Basics & Amdahl's Law
 
 There are 3 concurrency methods
 | Concurrency Type | Switching Decision | Number of Processors |
 | ------------- |:-------------:| -----:|
 |Pre-emptive multitasking (threading) | The operating system decides when to switch tasks | 1 |
-|Cooperative multitasking (asyncio) | The tasks themselves decide when to give up control | 1 |
+|Cooperative multitasking (asyncio) | The tasks themselves decide when to give up control. A malicious program can bring the entire system to a halt by busy-waiting or running an infinite loop and not giving up control.   | 1 |
 |Multiprocessing (multiprocessing) | The processes all run at the same time on different processors | Many |
-In preemptive multitasking, the operating system preempts a program to allow another waiting task to run on the CPU.
-Cooperative Multitasking involves well-behaved programs voluntarily giving up control back to the scheduler so that another program can run. A malicious program can bring the entire system to a halt by busy-waiting or running an infinite loop and not giving up control.  
+
+** Amdahl's Law **
+$ S(n) = \frac{1}{1-P + \frac{P}{n} } $
+*	S(n) is the speed-up achieved by using n cores or threads.
+*	P is the fraction of the program that is parallelizable.
+*	(1 - P) is the fraction of the program that must be executed serially.
+As n approaches infinity:  
+$S(n) = \frac{1}{1-P} = \frac{1}{faction of program NOT parallized}$
+* Utilization * : S(n) speed-up divided by the number of processors.
 
 # 2. program vs process vs thread
-**Program**: A program is a set of instructions and associated data that resides on the disk and is loaded by the operating system to perform a task. An **executable file** or a **python script** file are examples of programs.  
-A process is a program in execution.
-A thread is the smallest unit of execution in a process which simply executes instructions serially. ** A process can have multiple threads**
-**_ Processes don't share any resources amongst themselves whereas threads share the resources including memory _**
+** Program ** : A program is a set of instructions and associated data that resides on the disk and is loaded by the operating system to perform a task. An **executable file** or a **python script** file are examples of programs.  
+** process ** : a program in execution.
+** thread ** : the smallest unit of execution in a process which simply executes instructions serially.  
+Difference: ** A process can have multiple threads, Processes don't share any resources amongst themselves whereas threads share the resources including memory **
 
 # 3. concurrent , parallel 并行计算 vs distributed 分布式计算 vs cloud 云计算
 1. Concurrent: Happening over the same time interval. In the “olden days” when Unix was young there was **one CPU and all processes that were running at any given time were given “slices” of processor time**. They were concurrent but not parallel. There is **no communication** between nor coordination of these procresses.  
@@ -27,7 +34,10 @@ A thread is the smallest unit of execution in a process which simply executes in
 
 Concurrency vs parallel:  
 A concurrent system need not be parallel, whereas a parallel system is indeed concurrent. If there is 1 CPU, it is concurrent because each task gets a slice of CPU time to execute and move forward.
+
+<p align="center">
 ![Concurrency vs Parallel](/img/6-concurrency.png)
+</p>
 
 3. Distributed: Multiple programs execute concurrently and **communicate** with each other to collectively perform a computation. The essence of distributed computing is that an overall computation is “distributed” over multiple processes that perform the overall computational task using communication between the processes. distributed computing divides a single task among multiple computers that are connected via a network to achieve the task faster than using an individual computer.  
 
@@ -40,7 +50,4 @@ The throughput in this example can be defined as the number of files processed b
 
 # 5. Atomicity, atomic 原子操作
 
-
-# 6. Race Condition
-A race condition occurs when ** two or more threads can access shared data and they try to change it at the same time ** . Because the thread scheduling algorithm can swap between threads at any time, you don't know the order in which the threads will attempt to access the shared data. Therefore, the result of the change in data is dependent on the thread scheduling algorithm, i.e. both threads are "racing" to access/change the data.
 

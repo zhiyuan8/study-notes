@@ -18,15 +18,28 @@ Reentrant locks allow for re-locking or re-entering of a synchronization lock. I
 ```
 
 # 3. Mutex 排它锁
-** Mutural Exclusion ** . A mutex allows only a single thread to access a resource. Once a thread acquires a mutex, all other threads attempting to acquire the same mutex are blocked until the first thread releases the mutex. 
+** Mutural Exclusion ** . A mutex allows only a single thread to access a resource. Once a thread acquires a mutex, all other threads attempting to acquire the same mutex are blocked until the first thread releases the mutex.   
+
+<p align="center">
 ![Mutex](/img/8-Mutex.png)
+</p>
 
 # 4. Semaphore 信号量
 Semaphore is used for ** limiting numbers of access to a collection of resources ** . Think of semaphore as having a limited number of permits to give out. If a semaphore has given out all the permits it has, then any new thread that comes along requesting a permit will be blocked till an earlier thread with a permit returns it to the semaphore.  
 ** A mutex is owned by the thread ** acquiring it till the point the owning-thread releases it, whereas for a semaphore there's ** no notion of ownership** . 
-A semaphore with a single permit is called a binary semaphore and is often thought of as equivalent to a mutex.
-![Mutex](/img/7-Semaphore.png)
+A semaphore with a single permit is called a binary semaphore and is often thought of as equivalent to a mutex.  
 
+<p align="center">
+![Semqphore](/img/7-Semaphore.png)
+</p>
+
+
+# 5. Monitor
+A monitor is made up of * a mutex and a condition variable * . One can think of a mutex as a subset of a monitor. 
+
+# 6. Global Interpreter Lock
+Global Interpreter Lock：a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once. The GIL prevents race conditions and ensures thread safety. 
+But it makes ** CPU-bound tasks single-threaded ** .
 
 
 

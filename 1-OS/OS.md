@@ -2,7 +2,8 @@
 info from [Tutorialspoint](https://www.tutorialspoint.com/operating_system/index.htm)
 
 # 1. Operating System Definition
-An operating system is a program that acts as an interface between the user and the computer hardware and controls the execution of all kinds of programs.
+An operating system is a program that acts as an interface between the user and the computer hardware and controls the execution of all kinds of programs.  
+
 ![OS](/img/1-OS.png)
 
 # 2. Operating System Types
@@ -11,7 +12,7 @@ The users of a batch operating system do not interact with the computer directly
 Disadvantages:
 *  Lack of interaction between the user and the job.
 *  CPU is often idle, because the speed of the mechanical I/O devices is slower than the CPU.
-* Difficult to provide the desired priority.
+*  Difficult to provide the desired priority.
 
 ### 2. Time-sharing operating systems
 Time-sharing is a technique which enables many people, located at various terminals, to use a particular computer system at the same time. in Time-Sharing Systems, the objective is to **minimize response time**.
@@ -86,7 +87,7 @@ Priority can be decided based on memory requirements, time requirements or any o
 
 ### Round Robin(RR) Scheduling
 Each process is provided a fix time to execute, it is called a quantum.
-Once a process is executed for a given time period, it is preempted and other process executes for a given time period.
+Once a process is executed for a given time period, it is preempted and other process executes for a given time period.  
 ![Round Robin](/img/1-2-round-robin.png)
 
 ### Multiple-Level Queues Scheduling

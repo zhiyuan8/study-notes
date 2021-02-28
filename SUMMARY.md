@@ -24,5 +24,5 @@
 	* [Java OOP](5-java/Java-OOP.md)
 
 * [Android](6-android/README.md)
-	* [Android basics](6-android/basics.md)
+	* [Android basics](6-android/android-basics.md)
 		

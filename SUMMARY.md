@@ -20,9 +20,9 @@
 		* [RNN](4-ML/NLP/RNN.md)
 
 * [Java](5-java/README.md)
-	* [Java](5-java/basics.md)
-	* [Java](5-java/Java-OOP.md)
+	* [Java basics](5-java/basics.md)
+	* [Java OOP](5-java/Java-OOP.md)
 
 * [Android](6-android/README.md)
-	* [Java](6-android/basics.md)
+	* [Android basics](6-android/basics.md)
 		

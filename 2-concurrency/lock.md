@@ -34,8 +34,9 @@ A semaphore with a single permit is called a binary semaphore and is often thoug
 </p>
 
 
-# 5. Monitor
+# 5. Monitor (Mutex + condition variable)
 A monitor is made up of * a mutex and a condition variable * . One can think of a mutex as a subset of a monitor. 
+
 
 # 6. Global Interpreter Lock
 Global Interpreter Lock：a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecodes at once. The GIL prevents race conditions and ensures thread safety. 

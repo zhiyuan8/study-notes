@@ -14,3 +14,15 @@
 	* [Thread-safe counter, HashTable, linkedlist, queue](2-concurrency/data-structure.md)
 
 * [Distributed System](3-dist-sys/README.md)
+
+* [Machine Learning](4-ML/README.md)
+	* [Natural Language Processing](4-ML/NLP/README.md)
+		* [RNN](4-ML/NLP/RNN.md)
+
+* [Java](5-java/README.md)
+	* [Java](5-java/basics.md)
+	* [Java](5-java/Java-OOP.md)
+
+* [Android](6-android/README.md)
+	* [Java](6-android/basics.md)
+		

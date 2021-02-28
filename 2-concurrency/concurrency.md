@@ -1,4 +1,5 @@
 # Basics for concurrency
+info from book [Mastering Concurrency in Python](https://learning.oreilly.com/library/view/mastering-concurrency-in/9781789343052/) and [reference codes](https://github.com/PacktPublishing/Mastering-Concurrency-in-Python)
 info from [RealPython](https://realpython.com/python-concurrency/)
 info from [Educative.io](https://www.educative.io/courses/python-concurrency-for-senior-engineering-interviews/NEm20mBZZy6)
 info from [Tutorialspoint](https://www.tutorialspoint.com/concurrency_in_python/concurrency_in_python_quick_guide.htm)
@@ -33,7 +34,7 @@ Difference: ** A process can have multiple threads, Processes don't share any re
 2. parallel: Executing at the same time. Parallel computation by definition **1 computer requires multiple CPUs**. In this situation more than one concurrent process can be simultaneously executing. Same as concurrent processing, there is **no communication** between nor coordination of these procresses.  
 
 Concurrency vs parallel:  
-A concurrent system need not be parallel, whereas a parallel system is indeed concurrent. If there is 1 CPU, it is concurrent because each task gets a slice of CPU time to execute and move forward.
+A concurrent system NOT have to be parallel, whereas a parallel system is indeed concurrent. If there is 1 CPU, it is concurrent because each task gets a slice of CPU time to execute and move forward.
 
 <p align="center">
 ![Concurrency vs Parallel](/img/6-concurrency.png)

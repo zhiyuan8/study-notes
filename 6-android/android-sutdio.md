@@ -1,0 +1,1 @@
+AndroidManifest.xml This file describes all the components of your Android app and is read by the Android runtime system when your app is executed

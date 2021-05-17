@@ -58,9 +58,42 @@ android:clickable="true"
 ```
 
 # 4. Button
-click
-long pressing
-touch
+get button
+```
+Button btn = findViewById(R.id.btn);
+```
+click 点击事件
+
+```
+btn.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        // Code here executes on main thread after user presses button
+        Log.e(TAG,"onClick");
+    }
+});
+```
+long-press 长按事件
+```
+btn.setOnLongClickListener(new View.OnLongClickListener() {
+    @Override
+    public boolean onLongClick(View v) {
+        // Code here executes on main thread after user presses button
+        Log.e(TAG,"onLongClick");
+        return false;  // if return true, the event will be consumed, and won't call click
+    }
+});
+```
+touch 触摸事件
+```
+btn.setOnTouchListener(new View.OnTouchListener() {
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        Log.e(TAG,"onTouch: " + event.getAction() );
+        return false; // if return true, the event will be consumed, and won't call click / longClick
+    }
+});
+```
 
 # 5. EditText
 

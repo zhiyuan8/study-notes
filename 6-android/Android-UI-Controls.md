@@ -18,6 +18,7 @@ LinearLayout is a view group that aligns all children in a single direction, ver
     ... // add UI controls
  </LinearLayout>
 ```
+
 Why 'http://schemas...' must be the first in the layout xml file?
 This is XML Name Space declaration. XML namespaces are used for providing uniquely named elements and attributes in an XML document. xmlns:android describes the android namespace.
 
@@ -62,8 +63,29 @@ get button
 ```
 Button btn = findViewById(R.id.btn);
 ```
-click 点击事件
 
+colorSelector
+```
+<Button
+    android:id="@+id/btn"
+    android:text="this is button"
+    android:background="@drawable/btn_selector"
+    android:backgroundTint="@drawable/btc_color_selector"
+    android:layout_width="200dp"
+    android:layout_height="100dp"
+    />
+```
+
+btc_color_selector is defined at btc_color_selector.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color = "#FFFF0000" android:state_pressed="true"/>
+    <item android:color = "#FF00FF00"/>
+</selector>
+```
+
+click 点击事件
 ```
 btn.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -73,6 +95,7 @@ btn.setOnClickListener(new View.OnClickListener() {
     }
 });
 ```
+
 long-press 长按事件
 ```
 btn.setOnLongClickListener(new View.OnLongClickListener() {
@@ -84,6 +107,7 @@ btn.setOnLongClickListener(new View.OnLongClickListener() {
     }
 });
 ```
+
 touch 触摸事件
 ```
 btn.setOnTouchListener(new View.OnTouchListener() {
@@ -96,13 +120,48 @@ btn.setOnTouchListener(new View.OnTouchListener() {
 ```
 
 # 5. EditText
-
+```
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:hint="input passwd"
+        android:textColorHint="#95a1aa"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/ic_font_download_black_24dp"
+        android:drawablePadding="40dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:background="@color/white"
+        />
+```
+***android:drawableLeft*** : put image at left most.
+***android:drawablePadding*** : distance between image and edit text.
+***android:paddingStart*** : The start edge of whole editText box from start side.
 
 # 4. ImageView
 
-
+```
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/moon"
+        android:scaleType="centerCrop"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/moon"/>
+```
+***android:scaleType="fitXY"*** to stretch.  
+***android:scaleType="fitCenter"***,"fitStart" "fitEnd" to fit middle, left, right.  
+***android:scaleType="centerCrop"*** fill in and keep ratio.  
+***android:scaleType="matrix"*** 不改变原图大小，从ImageView左下角开始绘制原图，原图超过ImageView部门做剪裁处理  
 
 # 5. ProcessBar
+Indeterminate Progress
 
 
 

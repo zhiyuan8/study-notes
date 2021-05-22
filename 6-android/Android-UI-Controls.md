@@ -161,7 +161,49 @@ btn.setOnTouchListener(new View.OnTouchListener() {
 ***android:scaleType="matrix"*** 不改变原图大小，从ImageView左下角开始绘制原图，原图超过ImageView部门做剪裁处理  
 
 # 5. ProcessBar
-Indeterminate Progress
+
+```
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <!--progress bar, just load, do not show accurate status -->
+        <ProgressBar
+            android:id="@+id/pb"
+            android:indeterminate="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_pb"
+            android:onClick="clickFun"
+            android:text="Change status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--progress bar, show status, each time when click, increase 10 -->
+        <ProgressBar
+            android:id="@+id/pb2"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="100dp"
+            android:max="100"
+            android:layout_height="wrap_content" />
+        <!--模拟下载-->
+        <Button
+            android:onClick="loader"
+            android:text="load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+```
+
+# 6. Notification
+A class that represents how a persistent notification is to be presented to the user using the NotificationManager.
+To create a notification channel, follow these steps:
+(1) Construct a *NotificationChannel* object with a unique channel ID, a user-visible name, and an importance level.  
+(2) Optionally, specify the description that the user sees in the system settings with setDescription().  
+(3) Register the notification channel by passing it to createNotificationChannel().  
+
+
+
 
 
 

@@ -6,26 +6,47 @@ https://developer.android.com/guide
 
 
 # 1. Overview
-
-## 1.1 hardware
-sensors
-tranceivers
-storage: RAM, flash memory
-processors: CPU
-
-
-# 1.2 Android APP Components
 <p align="center">
 ![Android Module](android-frame.png)
 </p>
 
-*Intent*: Android Intent is the message that is passed between components such as activities, content providers, broadcast receivers, services etc. It is generally used with startActivity() method to invoke activity, broadcast receivers etc. The glue that simplifies implementation of Apps that reuse existing components.  
-*Activity*: provide a screen which users can interact in order to do something  
-*Broadcast Receiver*: event handlers that respond to broadcast announcements  
-*Services*: run in background to perform long-running operations or access remote resources  
-*Content Provider*: manage access to structured data & provide data security mechanism   
+Application components:
+*Intent*: Android Intent is the message that is passed between components such as activities, content providers, broadcast receivers, services etc. It is generally used with startActivity() method to invoke activity, broadcast receivers etc. The glue that simplifies implementation of Apps that reuse existing components.
+*Activity*: provide a screen which users can interact in order to do something. They dictate the UI and handle the user interaction to the smart phone screen.
+*Broadcast Receiver*: They handle communication between Android OS and applications.  
+*Services*: run in background to perform long-running operations or access remote resources. They handle background processing associated with an application.
+*Content Provider*: manage access to structured data & provide data security mechanism. They handle data and database management issues.  
 
-Java Threads: smallest units of execution for sequences of programmed instructions. Each process can have multiple threads that run concurrently.
+## 1.1 Activity
+An activity represents a single screen with a user interface,in-short Activity performs actions on the screen. For example, an email application might have one activity that shows a list of new emails, another activity to compose an email, and another activity for reading emails.  
+```
+public class MainActivity extends Activity {
+}
+```
+
+## 1.2 Service
+A service is a component that runs in the background to perform long-running operations.  
+```
+public class MyService extends Service {
+}
+```
+
+## 1.3 Broadcast Receivers
+Broadcast Receivers simply respond to broadcast messages from other applications or from the system.  
+```
+public class MyReceiver  extends  BroadcastReceiver {
+   public void onReceive(context,intent){}
+}
+```
+
+## 1.4 Content Providers
+
+```
+public class MyContentProvider extends  ContentProvider {
+   public void onCreate(){}
+}
+```
+## 1.5 Service
 
 # 2. Intent
 #2.1 Intent overview

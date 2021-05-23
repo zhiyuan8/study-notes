@@ -30,13 +30,11 @@ A user interface element that displays text to the user. To provide user-editabl
 
 first two chars: 00 100% transparent, FF 0% transparent. 3rd-4th controls red color (FF means 100% red), then g, then b.
 ```
-
 android:textColor="#FFFF0000"
 ```
 
 Specifies how to align the text by the view's x- and/or y-axis when the text is smaller than the view.
 ```
-
 android:gravity="center"
 ```
 
@@ -202,8 +200,8 @@ To create a notification channel, follow these steps:
 (2) Optionally, specify the description that the user sees in the system settings with setDescription().  
 (3) Register the notification channel by passing it to createNotificationChannel().  
 
-
-
+# 7. Toolbar
+It's a ViewGroup that can be placed anywhere in your XML layouts. Toolbar's appearance and behavior can be more easily customized than the ActionBar.
 
 
 

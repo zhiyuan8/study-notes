@@ -137,7 +137,7 @@ btn.setOnTouchListener(new View.OnTouchListener() {
 ***android:drawablePadding*** : distance between image and edit text.
 ***android:paddingStart*** : The start edge of whole editText box from start side.
 
-# 4. ImageView
+# 6. ImageView
 
 ```
     <ImageView
@@ -158,7 +158,7 @@ btn.setOnTouchListener(new View.OnTouchListener() {
 ***android:scaleType="centerCrop"*** fill in and keep ratio.  
 ***android:scaleType="matrix"*** 不改变原图大小，从ImageView左下角开始绘制原图，原图超过ImageView部门做剪裁处理  
 
-# 5. ProcessBar
+# 7. ProcessBar
 
 ```
     <LinearLayout
@@ -193,15 +193,54 @@ btn.setOnTouchListener(new View.OnTouchListener() {
     </LinearLayout>
 ```
 
-# 6. Notification
+# 8. Notification
 A class that represents how a persistent notification is to be presented to the user using the NotificationManager.
 To create a notification channel, follow these steps:
 (1) Construct a *NotificationChannel* object with a unique channel ID, a user-visible name, and an importance level.  
 (2) Optionally, specify the description that the user sees in the system settings with setDescription().  
 (3) Register the notification channel by passing it to createNotificationChannel().  
 
-# 7. Toolbar
+# 9. Toolbar
 It's a ViewGroup that can be placed anywhere in your XML layouts. Toolbar's appearance and behavior can be more easily customized than the ActionBar.
 
+```
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb"
+        app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="this is Toolbar"
+        app:titleTextColor="@android:color/white"
+        app:titleMarginStart="10dp"
+        app:subtitle="subtitle"
+        app:logo="@mipmap/ic_launcher"
+        android:background="?attr/colorPrimary"
+        >
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb2"
+        app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="this is Toolbar"
+        app:titleTextColor="@android:color/white"
+        app:titleMarginStart="90dp"
+        app:subtitle="subtitle"
+        app:logo="@mipmap/ic_launcher"
+        android:background="?attr/colorPrimary"
+        >
+        <TextView
+            android:text="overlap orignal title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            />
+    </androidx.appcompat.widget.Toolbar>
+```
+
+# 10. Toolbar
 
 

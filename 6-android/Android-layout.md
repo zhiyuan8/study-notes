@@ -22,6 +22,8 @@ This is XML Name Space declaration. XML namespaces are used for providing unique
 *android:layout_weight* specifies how much of the extra space in the layout to be allocated to the View. Usually use **android:height = 0dp** and only use **layout_weight** to control vertical space.
 
 # 2. RelativeLayout
+RelativeLayout is a view group that displays child views in relative positions. The position of each view can be specified as relative to sibling elements (such as to the left-of or below another view) or in positions relative to the parent RelativeLayout area (such as aligned to the bottom, left or center).    
+If you find yourself using several nested LinearLayout groups, you may be able to replace them with a single RelativeLayout.  
 
 
 # 3. FrameLayout

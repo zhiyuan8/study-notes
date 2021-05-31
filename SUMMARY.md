@@ -26,5 +26,6 @@
 * [Android](6-android/README.md)
 	* [Android basics](6-android/android-basics.md)
 	* [Android studio](6-android/android-studio.md)
+	* [Android layouts](6-android/Android-layout.md)
 	* [Android UI controls](6-android/Android-UI-Controls.md)
 		

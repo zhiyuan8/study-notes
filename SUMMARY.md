@@ -28,4 +28,8 @@
 	* [Android studio](6-android/android-studio.md)
 	* [Android layouts](6-android/Android-layout.md)
 	* [Android UI controls](6-android/Android-UI-Controls.md)
+	* [ViewPager](6-android/android-ViewPager.md)
+	* [Android LayoutParams & dp](6-android/android-international.md)
+	* [Android ViewPager](6-android/android-Viewpager.md)
+
 		

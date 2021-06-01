@@ -108,7 +108,6 @@ TableLayout containers do not display border lines for their rows, columns, or c
 cannot combine 2 rows, can only combine 2 columns.  
 
 ```
-<?xml version="1.0" encoding="utf-8"?>
 <!--    collapseColumns: hide specific column-->
 <!--    stretchColumns: only work when there is empty space-->
 
@@ -152,4 +151,27 @@ cannot combine 2 rows, can only combine 2 columns.
 ```
 
 # 6. ConstraintLayout
-A ConstraintLayout is a android.view.ViewGroup which allows you to position and size widgets in a flexible way.
+A ConstraintLayout is a android.view.ViewGroup which allows you to position and size widgets in a flexible way.  
+drag four directions to left, up, bottom, right, then button is center.  
+Use guideline if you need to align to center.
+
+<p align="center">
+![Constraint layout](constraint_layout.png)
+</p>
+
+<p align="center">
+![Constraint layout](constraint_layout2.png)
+</p>
+
+```
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        ... />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```

@@ -241,6 +241,35 @@ It's a ViewGroup that can be placed anywhere in your XML layouts. Toolbar's appe
     </androidx.appcompat.widget.Toolbar>
 ```
 
-# 10. Toolbar
+# 10. ListView
+Displays a vertically-scrollable collection of views, where each view is positioned immediatelybelow the previous view in the list. For a more modern, flexible, and performant approach to displaying lists, use RecyclerView.  
 
+```
+<ListView
+      android:id="@+id/list_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+```
 
+A list view is an adapter view that does not know the details, such as type and contents, of the views it contains. Instead list view requests views on demand from a ListAdapter as needed, such as to display new views as the user scrolls up or down.
+
+```
+private class MyAdapter extends BaseAdapter {
+
+      // override other abstract methods here
+
+      @Override
+      public View getView(int position, View convertView, ViewGroup container) {
+          if (convertView == null) {
+              convertView = getLayoutInflater().inflate(R.layout.list_item, container, false);
+          }
+
+          ((TextView) convertView.findViewById(android.R.id.text1))
+                  .setText(getItem(position));
+          return convertView;
+      }
+  }
+```
+
+# 11. RecyclerView
+A flexible view for providing a limited window into a large data set.  

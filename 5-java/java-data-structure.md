@@ -16,7 +16,6 @@ Basic operations: Searching, Sorting, Insertion, Updation, Deletion.
 
 ![all data struture](/5-java/ds1.png)
 
-
 # 1 new
 Everytiem you use new, you create data in the heap. data in heap does not go away when a function returns destroy its frame.
 

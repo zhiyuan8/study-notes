@@ -21,6 +21,7 @@
 
 * [Java](5-java/README.md)
 	* [Java basics](5-java/basics.md)
+	* [Java data structure](5-java/Java-data-structure.md)
 	* [Java OOP](5-java/Java-OOP.md)
 
 * [Android](6-android/README.md)

@@ -1,5 +1,8 @@
 # Java OOP (Inherience, Overloading, Phr)
 
+*Local variables* − Variables defined inside methods.
+*Instance variables* − Instance variables are variables within a class but outside any method.
+*Class variables* − Class variables are variables declared within a class, outside any method, with the *static* keyword.
 
 # 1. Class Grammar
 state
@@ -8,7 +11,6 @@ instance variable
 object / instance
 static, public: A static method, which means that it can be accessed without creating an object of the class, unlike public, which can only be accessed by objects.  
 final: If you don't want other classes to inherit from a class, use the final keyword
-
 
 ```java
 public class Main {

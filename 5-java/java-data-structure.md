@@ -1,4 +1,8 @@
 # Java data structure
+https://www.javatpoint.com/data-structure-tutorial
+
+
+
 Data structure can be classified as:  
 *Linear data structure* :  Arrays, Linked list, Stacks, and Queues. In these data structures, one element is connected to only one another element in a linear form.  
 *Non-linear data structure* :  trees and graphs.  When one element is connected to the 'n' number of elements known as a non-linear data structure.  
@@ -16,11 +20,45 @@ Basic operations: Searching, Sorting, Insertion, Updation, Deletion.
 
 ![all data struture](/5-java/ds1.png)
 
-# 1 new
-Everytiem you use new, you create data in the heap. data in heap does not go away when a function returns destroy its frame.
+Everytime you use new, you create data in the heap. data in heap does not go away when a function returns destroy its frame.  
 
-The Collection Interface
+# 1. Array
+Array is linear data structure which stores fixed number of similar elements.  
+```java
+import java.util.Arrays
+```
+| method      | Description |
+| ----------- | ----------- |
+| int Arrays.binarySearch(Object[] a, Object key)      | return index of the search key, if it is contained in the array; otherwise, (-(insertion point) – 1). Note, array must be sorted! |
+| boolean Arrays.equals(Object[] a, Object[] a2)  | same as "a==a2", reference comparison, must be same object.  |
+| bool xx.equals(Object[] a2) | value comparison, but must be same precison. float and double comparison will return false. |
+| void Arrays.fill(Object[] a, Object val) | fill |
+| void sort(Object[] a) | sort |
+| int[] copyOf(int[] original, int newLength) | copy the specified array, truncating or padding with false |
+| int[] copyOfRange(int[] original, int from, int to) | copy the specified array with index [from, to]|
+| toString() | System.out.println(Arrays.toString(Arr)); |
 
+# 2. The Collection Interface
+
+# 1.1 List
+This extends Collection and an instance of List stores an ordered collection of elements.
+
+```java
+List a1 = new ArrayList();
+List l1 = new LinkedList();
+```
+
+
+
+
+
+
+# 2. Set
+This extends Collection to handle sets, which must contain unique elements.  
+
+```java
+Set<Integer> set = new HashSet<Integer>();
+```
 
 
 

@@ -38,8 +38,13 @@ Java is always pass by value.
 When you pass a primitive it's a copy of the value, when you pass an object it's *a copy of the reference pointer*.  
 BUT, if reference contains objects, then *the value of an object can be modified* in the method but not the entire object.  
 
-# 2. Enums, do-while, for-each
-## 2.1 Enums
+# 3. always shallow copy
 
-## 2.1 Enums
+
+# 4. Enums, do-while, for-each
+## 4.1 Enums
+
+## 4.2 do-while
+
+## 4.3 for-each
 

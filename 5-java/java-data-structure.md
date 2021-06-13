@@ -1,6 +1,7 @@
 # Java data structure
 https://www.javatpoint.com/data-structure-tutorial
-
+https://www.educative.io/courses/data-structures-coding-interviews-java
+https://www.educative.io/path/ace-java-coding-interview
 
 
 Data structure can be classified as:  
@@ -22,7 +23,7 @@ Basic operations: Searching, Sorting, Insertion, Updation, Deletion.
 
 Everytime you use new, you create data in the heap. data in heap does not go away when a function returns destroy its frame.  
 
-# 1. Array
+# 1 Array
 Array is linear data structure which stores fixed number of similar elements.  
 ```java
 import java.util.Arrays
@@ -31,44 +32,13 @@ import java.util.Arrays
 | ----------- | ----------- |
 | int Arrays.binarySearch(Object[] a, Object key)      | return index of the search key, if it is contained in the array; otherwise, (-(insertion point) – 1). Note, array must be sorted! |
 | boolean Arrays.equals(Object[] a, Object[] a2)  | same as "a==a2", reference comparison, must be same object.  |
-| bool xx.equals(Object[] a2) | value comparison, but must be same precison. float and double comparison will return false. |
+| bool arr.equals(Object[] a2) | value comparison, but must be same precison. float and double comparison will return false. |
 | void Arrays.fill(Object[] a, Object val) | fill |
-| void sort(Object[] a) | sort |
-| int[] copyOf(int[] original, int newLength) | copy the specified array, truncating or padding with false |
-| int[] copyOfRange(int[] original, int from, int to) | copy the specified array with index [from, to]|
-| toString() | System.out.println(Arrays.toString(Arr)); |
+| void Arrays.sort(Object[] a) | sort |
+| int[] Arrays.copyOf(int[] original, int newLength) | copy the specified array, truncating or padding with false |
+| int[] Arrays.copyOfRange(int[] original, int from, int to) | copy the specified array with index [from, to), to is not included|
+| Arrays.toString() | System.out.println(Arrays.toString(Arr)); |
 
-# 2. The Collection Interface
-
-# 1.1 List
-This extends Collection and an instance of List stores an ordered collection of elements.
-
-```java
-List a1 = new ArrayList();
-List l1 = new LinkedList();
-```
-
-
-
-
-
-
-# 2. Set
-This extends Collection to handle sets, which must contain unique elements.  
-
-```java
-Set<Integer> set = new HashSet<Integer>();
-```
-
-
-
-
-
-
-
-
-
-# 2. Arrays
 create array, array length is fixed, must have []
 ```java
 import java.util.Arrays;
@@ -87,42 +57,73 @@ boolean isEqual = Arrays.equals(x,y); // Arrays.equals(arr1,arr2)
 Arrays.sort(x);	// Arrays.equals(arr1), inplace
 int pos = Arrays.binarySearch(x,10); // Arrays.binarySearch(arr1,key), < 0 if not found
 Arrays.fill(x,1); // Arrays.fill(arr1, val)
-System.out.println(Arrays.toString(arr)); // for print, get "[1, 1, 1, 1]"
+System.out.println(Arrays.toString(arr)); // for print, get "[1.0, 1.0, 1.0]"
+
+double[] fArrCopy = Arrays.copyOfRange(fArr,0,3);
+System.out.println("fArrCopy = " + Arrays.toString(fArrCopy)); // for print, get "[1.0]"
 ```
 
-# 3. List
+# 2. The Collection Interface
+methods for collection:  
 ```java
 Collection<Type> name = new Collection<Type>(); // same initialization
-
-–boolean add(E o)
-–boolean contains(Object o)
-–boolean remove(Object o)
-–boolean isEmpty()
-–int size()
-–Iterator<E> iterator()
 ```
+| method      | Description |
+| ----------- | ----------- |
+|boolean arr.add(E o) | append to last |
+|boolean arr.addAll(Collections<E> o) | append collection to last |
+|boolean arr.contains(Object o) | check object o|
+|boolean arr.containsAll(Collection c) | check collection c|
+|boolean arr.remove(Object o) | delete object o|
+|boolean arr.removeAll(Object o) | delete object o|
+|boolean arr.isEmpty() | check size == 0|
+|int arr.size() | return length|
 
-Iterator methods:
+Iterator methods:  
 ```java
 Iterator<String> itr = myFriends.iterator();
 ```
-hasNext() returns true if there are more elements to examine
-next() returns the next element from the collection
-remove() removes the last value returned by next()
+| method      | Description |
+| ----------- | ----------- |
+|boolean it.hasNext() | returns true if there are more elements to examine |
+|int it.next() | returns the next element from the collection |
+|void it.remove() | removes the last value returned by next() |
 
-
-### 3.1 ArrayList
-The ArrayList class is a resizable array.
-
-
-
-When you declare an ArrayList object, you should use the List interface as the datatype instead of ArrayList
-```java
-List<String> aList = new ArrayList<String>(); // allow you to change to a LinkedList implementation in the future by changing a single line of code!
-ArrayList<String> aList = new ArrayList<String>(); // not recommend
+``` java
+ArrayList<int> nums = new ArrayList<int>(Arrays.asList(1,2,3,4,5,6,7,8));
+Iterator<String> it = nums.iterator(); // Get the iterator
+while(it.hasNext()) { // hasNext() & next()
+		System.out.println(it.next());
+}
 ```
 
-### 3.2 LinkedList
+## 2.1 List
+```java
+public interface List<E> extends Collection<E>
+```
+This extends Collection and an instance of List stores an ordered collection of elements.  
+
+```java
+List a1 = new ArrayList();
+List l1 = new LinkedList();
+```
+
+## 2.2 Queue
+
+
+
+# 2.3 Set
+This extends Collection to handle sets, which must contain unique elements.  
+
+```java
+Set<Integer> set = new HashSet<Integer>();
+```
+
+
+
+
+
+
 
 
 
@@ -137,7 +138,7 @@ LinkedHashSet
 
 
 
-### 5. Map
+# 3. The Map Interface
 
 HashMap
 When you declare a HashMap object, you should use the Map interface as the datatype instead of HashMap

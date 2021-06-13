@@ -1,5 +1,8 @@
 # Self-learn Notes
 
+* [Leetcode](0-leetcode/README.md)
+    * [template](0-leetcode/template.md)
+
 * [Operating System](1-OS/README.md)
     * [OS & Scheduling](1-OS/OS.md)
     * [Virtual Memory](1-OS/virtual-mem.md)

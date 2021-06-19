@@ -9,6 +9,9 @@ public class data_structure {
 		double[] fArr = new double[]{2.2,1.1,3.3};
 		Arrays.sort(fArr); // sort
 		System.out.println("fArr = " + Arrays.toString(fArr));
+		
+		System.out.println("fArr = " + Arrays.deepToString(fArr)); // if your array contains other arrays as elements:
+		
 		System.out.println("1.1 locates at " + Arrays.binarySearch(fArr,1.1)); // 0, 1.1 can be found
 		System.out.println("1.5 locates at " + Arrays.binarySearch(fArr,1.5)); // -2, insert at 2nd position, index 1
 		float [] fArr2 = new float[]{1.1f,2.2f,3.3f};

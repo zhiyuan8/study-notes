@@ -28,6 +28,11 @@ Array is linear data structure which stores fixed number of similar elements.
 ```java
 import java.util.Arrays
 ```
+| field      | Description |
+| ----------- | ----------- |
+| array.length | for Array |
+| ArrayList.size() | for ArrayList |
+
 | method      | Description |
 | ----------- | ----------- |
 | int Arrays.binarySearch(Object[] a, Object key)      | return index of the search key, if it is contained in the array; otherwise, (-(insertion point) – 1). Note, array must be sorted! |

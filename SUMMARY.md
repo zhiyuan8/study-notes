@@ -25,7 +25,7 @@
 * [Java](5-java/README.md)
 	* [Java basics](5-java/basics.md)
 	* [Java data structure](5-java/java-data-structure.md)
-	* [Java arrayList, LinkedList](5-java/java-List.md)
+	* [arrayList, LinkedList](5-java/java-List.md)
 	* [Java String](5-java/java-string.md)
 	* [Java OOP](5-java/java-OOP.md)
 

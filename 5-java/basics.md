@@ -32,7 +32,7 @@ In terminal. compile and run
 javac HelloWorld.java  // HelloWorld.class is generated
 java HelloWorld
 ```
- 
+
 # 2. pass by value
 Java is always pass by value.  
 When you pass a primitive it's a copy of the value, when you pass an object it's *a copy of the reference pointer*.  
@@ -48,3 +48,10 @@ BUT, if reference contains objects, then *the value of an object can be modified
 
 ## 4.3 for-each
 
+# 5. Math
+
+| method      | Description |
+| ----------- | ----------- |
+| double Math.pow(double a,double b) | use '(int)pow(i,2)' to convert return type |
+| double Math.exp(double d) | a - the exponent to raise e to. |
+| max, min, abs | max, min, abs |

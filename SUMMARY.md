@@ -1,7 +1,8 @@
 # Self-learn Notes
 
-* [Leetcode](0-leetcode/README.md)
-    * [template](0-leetcode/template.md)
+* [Jiuzhang Algorithm](0-Jiuzhang-Algorithm/README.md)
+    * [template](0-Jiuzhang-Algorithm/template.md)
+    * [Binary Search](0-Jiuzhang-Algorithm/BinarySearch.md)
 
 * [Operating System](1-OS/README.md)
     * [OS & Scheduling](1-OS/OS.md)

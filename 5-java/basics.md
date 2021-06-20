@@ -33,7 +33,7 @@ javac HelloWorld.java  // HelloWorld.class is generated
 java HelloWorld
 ```
 
-# 2. pass by value
+# 2. pass by value, always shallow copy
 Java is always pass by value.  
 When you pass a primitive it's a copy of the value, when you pass an object it's *a copy of the reference pointer*.  
 BUT, if reference contains objects, then *the value of an object can be modified* in the method but not the entire object.  
@@ -73,7 +73,6 @@ Method 1: *get*
 		System.out.println( Arrays.toString( ( array ) ) );
 ```
 
-# 4. always shallow copy
 
 
 # 5. Enums, do-while, for-each

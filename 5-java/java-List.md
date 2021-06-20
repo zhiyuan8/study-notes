@@ -6,6 +6,7 @@ When you declare an ArrayList object, you should use the List interface as the d
 
 | method      | Description |
 | ----------- | ----------- |
+| collections.sort(Collection c) | sort ArrayList |
 |int it.indexOf(E element) | return 1st occurence of element,  -1 if this list does not contain the element. |
 |int it.lastIndexOf(E element) | return last occurence of element |
 |void it.get(int index) | index |

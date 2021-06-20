@@ -15,6 +15,6 @@ Explanation:
 
 # 2 related challenging problem
 Leetcode:
-| Problem | Notes |
-| | |
+| No | Problem | Notes |
+| 658 | Find K Closest Elements | first last <= index; two pointer |
 

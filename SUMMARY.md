@@ -2,6 +2,7 @@
 
 * [Jiuzhang Algorithm](0-Jiuzhang-Algorithm/README.md)
     * [template](0-Jiuzhang-Algorithm/template.md)
+    * [Most frequent problems](0-Jiuzhang-Algorithm/Most-frequent-problems.md)
     * [Binary Search](0-Jiuzhang-Algorithm/BinarySearch.md)
 
 * [Operating System](1-OS/README.md)

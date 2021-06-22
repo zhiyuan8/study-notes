@@ -73,6 +73,15 @@ Method 1: *get*
 		System.out.println( Arrays.toString( ( array ) ) );
 ```
 
+# math & magic number
+
+| method      | Description |
+| ----------- | ----------- |
+| double Math.pow(double a,double b) | use '(int)pow(i,2)' to convert return type |
+| double Math.exp(double d) | e^d |
+| Math.max, Math.min, Math.abs | max, min, abs |
+| Integer.MAX_VALUE | 2^31 - 1 |
+| Integer.MIN_VALUE | -2^31 |
 
 
 # 5. Enums, do-while, for-each
@@ -81,11 +90,3 @@ Method 1: *get*
 ## 5.2 do-while
 
 ## 5.3 for-each
-
-# 6. Math
-
-| method      | Description |
-| ----------- | ----------- |
-| double Math.pow(double a,double b) | use '(int)pow(i,2)' to convert return type |
-| double Math.exp(double d) | a - the exponent to raise e to. |
-| max, min, abs | max, min, abs |

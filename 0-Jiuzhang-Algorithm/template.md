@@ -1,5 +1,6 @@
 # 1 Time complexity
 | time complexity | Method |
+| ----------- | ----------- |
 | O(logn) | binary search |
 | O(sqrt(n)) | find the prime factors of n (Grover's algorithm) |
 | O(n) | scan(two pointer)， tree |

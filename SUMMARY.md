@@ -1,9 +1,13 @@
 # Self-learn Notes
 
 * [Jiuzhang Algorithm](0-Jiuzhang-Algorithm/README.md)
-    * [template](0-Jiuzhang-Algorithm/template.md)
+    * [template-1](0-Jiuzhang-Algorithm/important-template-1.md)
+    * [template-2](0-Jiuzhang-Algorithm/important-template-2.md)
     * [Most frequent problems](0-Jiuzhang-Algorithm/Most-frequent-problems.md)
-    * [Binary Search](0-Jiuzhang-Algorithm/BinarySearch.md)
+    * [Recursion](0-Jiuzhang-Algorithm/0-Recursion.md)
+    * [Binary Search](0-Jiuzhang-Algorithm/1-BinarySearch.md)
+    * [Tree](0-Jiuzhang-Algorithm/2-Tree.md)
+    * [BFS-DFS](0-Jiuzhang-Algorithm/3-BFS-DFS.md)
 
 * [Operating System](1-OS/README.md)
     * [OS & Scheduling](1-OS/OS.md)

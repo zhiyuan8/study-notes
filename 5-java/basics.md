@@ -33,6 +33,10 @@ javac HelloWorld.java  // HelloWorld.class is generated
 java HelloWorld
 ```
 
+Assign value in 1 line:
+```java
+int a = 4, b = a+1, c=b*b;
+```
 # 2. pass by value, always shallow copy
 Java is always pass by value.  
 When you pass a primitive it's a copy of the value, when you pass an object it's *a copy of the reference pointer*.  

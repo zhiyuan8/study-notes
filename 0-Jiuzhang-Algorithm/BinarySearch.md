@@ -20,4 +20,8 @@ Leetcode:
 | 658 | Find K Closest Elements | first last <= index; two pointer |
 | 154 | Find Minimum in Rotated Sorted Array II | When there are duplicates, move start until A[start] < A[end] , compare A[mid] with A[end], worse case O(n) |
 | 1095 | Find in Mountain Array | Find index of peak first by compare with value with index + 1, then binary search the 2 halves.  |
+| 74 | Search a 2D Matrix | binary search 1st column to find which row to start with, then scan that row |
+| 240 | Search a 2D Matrix II | not binary search, scan from left bottom to top right |
+| 302 | Smallest Rectangle Enclosing Black Pixels | Way 1: BFS and save max/min row and col index Way 2: |
+
 

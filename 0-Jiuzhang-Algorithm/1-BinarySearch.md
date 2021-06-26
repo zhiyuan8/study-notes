@@ -22,6 +22,6 @@ Leetcode:
 | 1095 | Find in Mountain Array | Find index of peak first by compare with value with index + 1, then binary search the 2 halves.  |
 | 74 | Search a 2D Matrix | binary search 1st column to find which row to start with, then scan that row |
 | 240 | Search a 2D Matrix II | not binary search, scan from left bottom to top right |
-| 302 | Smallest Rectangle Enclosing Black Pixels | Way 1: BFS and save max/min row and col index Way 2: |
+| 302 | Smallest Rectangle Enclosing Black Pixels | Way 1: BFS and save max/min row and col index Way 2: Binary search columns, check if mid column has any 1, to find left & right most column. Do same for row. O(nlogm + mlogn) |
 
 

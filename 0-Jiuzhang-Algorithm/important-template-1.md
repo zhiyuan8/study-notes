@@ -10,19 +10,37 @@
 | O(2^n) | combination |
 | O(n!) | permutation |
 
-# 1 binary search
+# 2 binary search
+```
+start + 1 < end
+int mid = start + (end-start)/2
+A[mid] == < >
+A[start] A[end]? target
+```
+
+# 3 two pointers 
+# 3.1 same direction
 
 
-# 2 two pointers in same direction
+# 3.2 different direction
+
+# 4. Tree traversal
+# 4.1 Non-Recursive (MUST REMEMBER) 
+
+# PreOrder
+
+# InOrder
+
+# PostOrder
+
+# 4.2 Recursive
 
 
-# 3 two pointers in different direction
-
-
-# 4 BFS (LinkedList + HashSet)
+# 5 BFS (LinkedList + HashSet)
 queue (FIFO) + Hashset  
 
 *graph*
+
 
 *2D matrix*
 

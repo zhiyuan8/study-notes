@@ -6,11 +6,13 @@ Char is a primitive data type which has no methods. char.equals() cannot work!
 | bool Character.isDigit(char c) | check digit |
 | bool Character.isLetter(char c) | check letter |
 | bool isLetterOrDigit(char c) | check letter or digit |
+| bool Characters.isWhitespace(char c) | check whitespace |
 | bool Character.isUpperCase(char c) | check upper |
 | char Character.toUpperCase(char c) | to upper |
 | bool Character.isLowerCase(char c) | check lower |
 | char Character.toLowerCase(char c) | to lower |
 | String Character.toString(char c) | to String |
+| int Character.getNumericValue(c)| to int |
 
 # 2. String property
 

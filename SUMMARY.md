@@ -10,6 +10,7 @@
     * [BFS-DFS](0-Jiuzhang-Algorithm/3-BFS-DFS.md)
 
 * [Operating System](1-OS/README.md)
+	* [heap & stack space](1-OS/heap_stack_space.md)
     * [OS & Scheduling](1-OS/OS.md)
     * [Virtual Memory](1-OS/virtual-mem.md)
     * [CPU Virtualization](1-OS/virtual-cpu.md)
@@ -34,6 +35,7 @@
 	* [arrayList, LinkedList](5-java/java-List.md)
 	* [Java String](5-java/java-string.md)
 	* [Java OOP](5-java/java-OOP.md)
+	* [Java lambda](5-java/lambda-expression.md)
 
 * [Android](6-android/README.md)
 	* [Android basics](6-android/android-basics.md)

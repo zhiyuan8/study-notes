@@ -21,8 +21,6 @@ Basic operations: Searching, Sorting, Insertion, Updation, Deletion.
 
 ![all data struture](/5-java/ds1.png)
 
-Everytime you use new, you create data in the heap. data in heap does not go away when a function returns destroy its frame.  
-
 # 1 Array
 Array is linear data structure which stores fixed number of similar elements.  
 ```java
@@ -69,40 +67,56 @@ System.out.println("fArrCopy = " + Arrays.toString(fArrCopy)); // for print, get
 ```
 
 # 2. The Collection Interface
-methods for collection:  
-```java
-Collection<Type> name = new Collection<Type>(); // same initialization
-```
+![Collection Interface](/5-java/Collection_hierarchy.png)
+
 | method      | Description |
 | ----------- | ----------- |
-|boolean arr.add(E o) | append to last |
-|boolean arr.addAll(Collections<E> o) | append collection to last |
-|boolean arr.contains(Object o) | check object o|
-|boolean arr.containsAll(Collection c) | check collection c|
-|boolean arr.remove(Object o) | delete object o|
-|boolean arr.removeAll(Object o) | delete object o|
-|boolean arr.isEmpty() | check size == 0|
-|int arr.size() | return length|
+| collections.sort(List<T> list) | sort ArrayList |
+| collections.sort(List<T> list, Comparator<? super T> c) | *Collections.reverseOrder()* |
+|int Collections.binarySearch(Collection c, int index) | return index of the search key, if it is contained in the array; otherwise, (-(insertion point) – 1). Note, array must be sorted! |
+| collections.reverse(List<T> list) | reverse |
+| collections.swap | swap |
+| collections.fill | fill |
+|collections.min(List<T> list, Comparator<? super T> c) | min |
+|collections.max(List<T> list, Comparator<? super T> c) | max |
 
-Iterator methods:  
+collection sort example:  
 ```java
-Iterator<String> itr = myFriends.iterator();
-```
-| method      | Description |
-| ----------- | ----------- |
-|boolean it.hasNext() | returns true if there are more elements to examine |
-|int it.next() | returns the next element from the collection |
-|void it.remove() | removes the last value returned by next() |
-
-``` java
-ArrayList<int> nums = new ArrayList<int>(Arrays.asList(1,2,3,4,5,6,7,8));
-Iterator<String> it = nums.iterator(); // Get the iterator
-while(it.hasNext()) { // hasNext() & next()
-		System.out.println(it.next());
+    public class MyClass {
+    /* To be able to access them from your static methods they need to be static member variables */
+    public static class Data { // start with upper letter!
+        public int x;
+        public int y;
+        public Data(int X, int Y){
+            this.x = X;
+            this.y = Y;
+        }
+    }
+    public static class DataCompare implements Comparator<Data> { // comparator
+    public int compare(Data a, Data b){
+        return a.x * a.y - b.x * b.y ; // compare according to x*y
+        }
+    }
+    public static void main(String args[]) {
+      List<Integer> lst = new ArrayList<>(Arrays.asList(1,3,2,5,4));
+      Collections.sort(lst,Collections.reverseOrder());
+      System.out.println(Arrays.toString(lst.toArray()));
+      
+      List<Data> lst2 = new ArrayList<>();
+      lst2.add(new Data(10,5));
+      lst2.add(new Data(1,10));
+      lst2.add(new Data(5,8));
+      Collections.sort(lst2, new DataCompare() );
+      lst2.sort((source, target) -> {return (- source.x + source.y);}); // lambda function to sort by -x+y
+    }
 }
 ```
 
-## 2.1 List
+## 2.1 List interface
+Elements have a specific order, and duplicate elements are allowed. Elements can be placed in a specific position.  
+1. java.util.ArrayList  
+2. java.util.LinkedList  
+
 ```java
 public interface List<E> extends Collection<E>
 ```
@@ -113,17 +127,31 @@ List a1 = new ArrayList();
 List l1 = new LinkedList();
 ```
 
-## 2.2 Queue
+## 2.2 Stack interface
+Stacks are created using java.util.Stack. 
 
 
+## 2.3 Queue
+1. java.util.LinkedList  
+2. java.util.PriorityQueue  
+2. java.util.ArrayDeque  
 
-# 2.3 Set
+
+# 2.4 Set
 This extends Collection to handle sets, which must contain unique elements.  
 
 ```java
 Set<Integer> set = new HashSet<Integer>();
 ```
 
+
+# 2.5 Double-ended queue (deque) interfaces
+
+
+Set interfaces
+
+
+Map interfaces
 
 
 

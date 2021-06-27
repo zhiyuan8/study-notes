@@ -6,18 +6,22 @@ When you declare an ArrayList object, you should use the List interface as the d
 
 | method      | Description |
 | ----------- | ----------- |
-| collections.sort(Collection c) | sort ArrayList |
+|int it.size() | return length |
 |int it.indexOf(E element) | return 1st occurence of element,  -1 if this list does not contain the element. |
 |int it.lastIndexOf(E element) | return last occurence of element |
 |void it.get(int index) | index |
 |void it.set(int index, E element) | set |
+|boolean it.isEmpty() | check size == 0|
+|boolean it.add(E o) | append to last |
+|boolean it.addAll(Collections<E> o) | append collection to last |
 |boolean it.addAll(int index, Collection c)| append from index |
+|boolean it.containsAll(Collection c) | check collection c|
+|boolean it.remove(Object o) | delete object o|
 |void removeRange(int fromIndex,int toIndex) | remove index [fromIndex, toIndex) |
-|boolean removeAll(Collection c) | remove all occurence of c |
-|boolean retainAll(Collection c)| Retains only the elements in this list that are contained in the specified collection |
-|boolean removeIf(Predicate<? super E> filter)| Removes all of the elements of this collection that satisfy the given predicate |
-|void replaceAll(String regex, String replacement) | replace regrex by replacement, used in String commonly |
-|int Collections.binarySearch(Collection c, int index) | return index of the search key, if it is contained in the array; otherwise, (-(insertion point) – 1). Note, array must be sorted! |
+|boolean it.removeAll(Collection c) | remove all occurence of c |
+|boolean it.retainAll(Collection c)| Retains only the elements in this list that are contained in the specified collection |
+|boolean it.removeIf(Predicate<? super E> filter)| Removes all of the elements of this collection that satisfy the given predicate |
+|void it.replaceAll(String regex, String replacement) | replace regrex by replacement, used in String commonly |
 
 ```java
 // Way 1: List<Type> obj = new ArrayList<>(Arrays.asList(A, B, ...));
@@ -41,6 +45,24 @@ list.removeIf(n -> (n % 3 == 0));
 // binarySearch
 int idx = Collections.binarySearch(list,5.0);
 System.out.println( "Binary Search 5.0, idx = " + idx);
+```
+
+Iterator methods:  
+```java
+Iterator<String> itr = myFriends.iterator();
+```
+| method      | Description |
+| ----------- | ----------- |
+|boolean it.hasNext() | returns true if there are more elements to examine |
+|int it.next() | returns the next element from the collection |
+|void it.remove() | removes the last value returned by next() |
+
+``` java
+List<int> nums = new ArrayList<int>(Arrays.asList(1,2,3,4,5,6,7,8));
+Iterator<String> it = nums.iterator(); // Get the iterator
+while(it.hasNext()) { // hasNext() & next()
+		System.out.println(it.next());
+}
 ```
 
 # 2 Linkedlist

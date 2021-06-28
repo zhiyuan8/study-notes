@@ -43,7 +43,49 @@ When you pass a primitive it's a copy of the value, when you pass an object it's
 BUT, if reference contains objects, then *the value of an object can be modified* in the method but not the entire object.  
 for example: ```List<Integer>```
 
-# 3. wrapper class
+
+# 3 main
+To add memeber class within 1 java.class file, 2 methods:  
+1. static  
+```java
+import java.util.*;
+public class Test {
+	public static void main(String[] args) {
+		Data d = new Data(1,2);
+	}
+	public static class Data { // way 1: add static
+		int x;
+		int y;
+		public Data(int x, int y){
+			this.x = x;
+			this.y = y;
+		}
+	}
+}
+```
+2. create an instance-level factory-method  
+```java
+import java.util.*;
+public class test2 {
+	public class Data {
+		int x;
+		int y;
+		public Data(int x, int y){
+			this.x = x;
+			this.y = y;
+		}
+	}
+	Data createData(int x, int y){
+		return new Data(x,y);
+	}
+	public static void main(String[] args){
+        test2 test = new test2(); // way 2: step 1, create an instance of own class
+		Data data = test.createData(1,2); //  way 2: step 2, use method to create Data class
+	}
+}
+```
+
+# 4. wrapper class
 Data structures in the Collection framework, such as ArrayList and Vector, store only objects (reference types) and not primitive types.
 
 | Primitive types | wrapper class |
@@ -77,7 +119,7 @@ Method 1: *get*
 		System.out.println( Arrays.toString( ( array ) ) );
 ```
 
-# math & magic number
+# 5. math & magic number
 
 | method      | Description |
 | ----------- | ----------- |
@@ -88,9 +130,9 @@ Method 1: *get*
 | Integer.MIN_VALUE | -2^31 |
 
 
-# 5. Enums, do-while, for-each
-## 5.1 Enums
+# 6. Enums, do-while, for-each
+## 6.1 Enums
 
-## 5.2 do-while
+## 6.2 do-while
 
-## 5.3 for-each
+## 6.3 for-each

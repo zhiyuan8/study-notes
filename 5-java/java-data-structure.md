@@ -137,7 +137,7 @@ Stacks are created using java.util.Stack.
 2. java.util.ArrayDeque  
 
 | Function | description |
-|-----| ----- |
+| ----- | ----- |
 | boolean add(E e) | Inserts the specified element into this queue |
 | Type peek() | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty. |
 | Type poll() | Retrieves and removes the head of this queue, or returns null if this queue is empty. |

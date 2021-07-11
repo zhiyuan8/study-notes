@@ -130,6 +130,13 @@ List l1 = new LinkedList();
 ## 2.2 Stack interface
 Stacks are created using java.util.Stack. 
 
+| Function | description |
+| ----- | ----- |
+| Type push(E item) Pushes an item onto the top of this stack. Same as *add* |
+| boolean isEmpty(E e) | Return whether queue is empty or not |
+| Type peek() | Looks at the object at the top of this stack without removing it from the stack. |
+| Type pop() | Removes the object at the top of this stack and returns that object as the value of this function. |
+| int search(Object o) |Returns the 1-based position where an object is on this stack. |
 
 ## 2.3 Queue
 1. java.util.LinkedList  
@@ -139,6 +146,7 @@ Stacks are created using java.util.Stack.
 | Function | description |
 | ----- | ----- |
 | boolean add(E e) | Inserts the specified element into this queue |
+| boolean isEmpty(E e) | Return whether queue is empty or not |
 | Type peek() | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty. |
 | Type poll() | Retrieves and removes the head of this queue, or returns null if this queue is empty. |
 
